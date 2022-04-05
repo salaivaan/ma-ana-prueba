@@ -1,0 +1,78 @@
+.Gridpapa{
+    /*activa sistema de grillas*/
+    display: grid;
+    grid-template-columns: fr fr fr;
+    grid-template-rows: fr fr fr;
+    
+    
+    column-gap: 25px;
+    row-gap: 25px;
+    /*justify-items" y align-items distribuyen   start(der) -end (izq)-center-stretch*/
+    justify-items:center ;
+    align-items: flex-start;
+
+    /*posiciona todos lo elementos = justify-content = star/end/center/strecht*/
+    height: 500px;
+    align-content: flex-start;
+
+}
+
+
+.item p {
+    color: black;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.item {
+    background-color: aqua;
+    border: 1px black solid; 
+}
+/*2da parte de la CLASE CLAVE*/
+.contenedor{
+display: grid;
+grid-template-columns: 200px 1fr auto 200px;
+grid-template-rows: 100px 20rem 20rem 100px;
+grid-template-areas: 
+"nav header header header"
+"nav sectionA sectionA aside"
+"nav sectionB sectionB aside"
+"nav footer footer footer"
+;
+
+}
+header{
+    background-color: aliceblue;
+    grid-area: header;
+}
+
+nav{
+    background-color: aqua;
+    grid-area: nav;
+}
+
+.sectionA{
+    background-color: bisque;
+    grid-area: sectionA;
+}
+
+.sectionB{
+background-color: blueviolet;
+grid-area: sectionB;
+}
+
+aside{
+    background-color: chartreuse;
+    grid-area: aside;
+
+}
+
+footer{
+    background-color: brown;
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
+
